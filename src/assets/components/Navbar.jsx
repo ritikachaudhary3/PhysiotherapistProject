@@ -30,7 +30,7 @@ export default function Navbar() {
           <button onClick={() => scrollToSection('about')} className="hover:text-[#3B82F6]">About</button>
           <button onClick={() => scrollToSection('service')} className="hover:text-[#3B82F6]">Service</button>
           <button onClick={() => scrollToSection('stories')} className="hover:text-[#3B82F6]">Testimonial</button>
-          <Link to ='/blogpage' className="hover:text-[#3B82F6]">Blog</Link>
+          <button onClick={() => scrollToSection('blog')} className="hover:text-[#3B82F6]">Blog</button>
           <button onClick={() => scrollToSection('contactus')} className="hover:text-[#3B82F6]">Contact Us</button>
         </div>
 
@@ -56,7 +56,7 @@ export default function Navbar() {
           <button onClick={() => scrollToSection('about')} className="block w-full text-left">About</button>
           <button onClick={() => scrollToSection('service')} className="block w-full text-left">Service</button>
           <button onClick={() => scrollToSection('stories')} className="block w-full text-left">Testimonial</button>
-          <Link to='/blogpage' className="block w-full text-left">Blog</Link>
+          <button onClick={() => scrollToSection('blog')} className="hover:text-[#3B82F6]">Blog</button>
           <button onClick={() => scrollToSection('contactus')} className="block w-full text-left">Contact</button>
         </div>
       )}
