@@ -25,7 +25,7 @@ const blogs = [
 
 const Blog = () => {
     return (
-            <section id="blog" className="py-20 bg-white">
+            <section  className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-16 text-center ">
                   {/* Header */}
                   <h2 className="text-3xl md:text-4xl font-bold text-[#4A5568] mb-2">
