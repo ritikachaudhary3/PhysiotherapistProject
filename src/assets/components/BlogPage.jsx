@@ -19,7 +19,7 @@ const BlogPage = () => {
         <div className="flex items-center justify-center text-[#4A5568] text-sm mb-4 gap-1">
           <a href="/" className="hover:underline">Home</a>
           <ChevronRight className="w-4 h-4" />
-          <a href="/blogs" className="hover:underline">Blogs</a>
+          <a href="/blogpage" className="hover:underline">Blogs</a>
           <ChevronRight className="w-4 h-4" />
           <span className="text-[#4A5568] font-medium">5 Exercises for Better Posture</span>
         </div>
@@ -51,7 +51,7 @@ const BlogPage = () => {
           <img
             src={Img}
             alt="Yoga Exercise"
-            className="  w-full  object-cover"
+            className="w-full  object-cover"
           />
         </div>
       </div>
@@ -59,8 +59,6 @@ const BlogPage = () => {
     <BlogContent/>
     <Footer/>
     </>
-    
-
   );
 };
 

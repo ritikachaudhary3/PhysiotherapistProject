@@ -3,23 +3,26 @@ import Img from '/src/assets/aboutimg.png'
 
 import { ArrowRight, Award } from 'lucide-react'; // Make sure you have lucide-react installed
 
-const About= () => {
+const About = () => {
   return (
-    <section className="bg-[#F1F8FF] py-12 px-8">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+    <section
+      id="about"
+      className="relative h-screen flex items-center justify-center px-6 md:px-20 bg-[#F1F8FF]"
+    >
+      <div className="max-w-7xl w-full flex flex-col md:flex-row items-center gap-16 md:gap-32">
         
-        {/* Image */}
-        <div className="flex-shrink-0">
-          <div className="w-64 h-64 rounded-full overflow-hidden mx-auto">
-            <img 
-              src={Img} 
-              alt="Dr. Radhika Sharma" 
+        {/* Image Section */}
+        <div className="flex flex-col items-center md:items-start">
+          <div className="w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden">
+            <img
+              src={Img}
+              alt="Dr. Radhika Sharma"
               className="w-full h-full object-cover"
             />
           </div>
 
           {/* Experience Badge */}
-          <div className="flex items-center justify-center mt-4">
+          <div className="flex items-center justify-center md:justify-start mt-4">
             <div className="flex items-center bg-white px-4 py-2 rounded-full text-sm font-semibold text-[#4A5568] gap-2 shadow-md">
               <Award className="w-4 h-4 text-pink-500" />
               15+ Years Experience
@@ -29,7 +32,7 @@ const About= () => {
 
         {/* Text Content */}
         <div className="text-center md:text-left">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#4A5568] mb-2">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#4A5568] mb-2">
             Dr. Radhika Sharma, MPT
           </h2>
           <p className="text-[#4A5568] font-semibold mb-4">
@@ -62,6 +65,7 @@ const About= () => {
             <ArrowRight className="w-4 h-4" />
           </div>
         </div>
+
       </div>
     </section>
   );

@@ -26,51 +26,17 @@ const router = createBrowserRouter(
         <Member/>
         <Blog/>
         <Footer/>
+      </div>
+    },
+    
+    
+    {
+      path: "/blogpage",
+      element: 
+      <div>
         <BlogPage/>
       </div>
     },
-    // {
-    //   path: "/about",
-    //   element: 
-    //   <div>
-    //     <Navbar/>
-    //     <About/>
-    //     <Footer/>
-    //   </div>
-    // },
-    // {
-    //   path: "/service",
-    //   element: 
-    //   <div>
-    //     <Service/>
-    //   </div>
-    // },
-
-    // {
-    //   path: "/stories",
-    //   element: 
-    //   <div>
-    //     <Stories/>
-    //   </div>
-    // },
-
-    // {
-    //   path: "/blog",
-    //   element: 
-    //   <div>
-    //     <Blog/>
-    //   </div>
-    // },
-
-  
-
-    // {
-    //   path: "/blogpage",
-    //   element: 
-    //   <div>
-    //     <BlogPage/>
-    //   </div>
-    // },
   
   ]
 )

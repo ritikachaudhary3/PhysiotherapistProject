@@ -2,7 +2,6 @@ import React from 'react'
 import { CalendarDays, ArrowRight } from "lucide-react";
 import img1 from'/src/assets/image1.png'
 import img2 from '/src/assets/image2.png'
-import { useNavigate } from 'react-router-dom';
 
 
 const blogs = [
@@ -25,7 +24,6 @@ const blogs = [
 ];
 
 const Blog = () => {
-   const navigate = useNavigate();
     return (
             <section id="blog" className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-16 text-center ">
@@ -85,7 +83,7 @@ const Blog = () => {
           
                   {/* Explore More Button */}
                   <div className="mt-12">
-                    <button  onClick={()=>navigate('/blogpage')} className="bg-gray-800 text-1xl text-[#F1F0FB] px-6 py-3 rounded-full flex items-center gap-2 mx-auto hover:bg-gray-700 transition">
+                    <button className="bg-gray-800 text-1xl text-[#F1F0FB] px-6 py-3 rounded-full flex items-center gap-2 mx-auto hover:bg-gray-700 transition">
                       Explore More <ArrowRight className="w-4 h-4 font-medium" />
                     </button>
                   </div>

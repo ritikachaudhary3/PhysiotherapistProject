@@ -15,51 +15,62 @@ export default function Navbar() {
       setIsOpen(false); // Close mobile menu after click
     }
   };
-
-  return (
-    <nav className="bg-white border-b-2">
-      <div className="max-w-7xl mx-auto md:px-20 py-4 flex justify-between px-8 items-center">
-        {/* Brand */}
-        <div className="font-lato md:text-[27px] text-[20px] font-[500] leading-[100%]">
-          <span className="text-gray-900">Serene</span>
-          <span className="text-[#3B82F6] hover:text-[#D44D7D]">Physio</span>
+  
+    return (
+      <nav className="bg-white border-b-2 sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6 md:px-20">
+          
+          {/* Brand */}
+          <div className="font-lato text-2xl md:text-3xl font-semibold">
+            <span className="text-gray-900">Serene</span>
+            <span className="text-[#3B82F6] hover:text-[#D44D7D]">Physio</span>
+          </div>
+  
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-8 text-lg text-[#4A5568] font-medium">
+            <button onClick={() => scrollToSection('about')} className="hover:text-[#3B82F6]">About</button>
+            <button onClick={() => scrollToSection('service')} className="hover:text-[#3B82F6]">Service</button>
+            <button onClick={() => scrollToSection('stories')} className="hover:text-[#3B82F6]">Testimonial</button>
+            <Link to="/blogpage" className="hover:text-[#3B82F6]">Blog</Link>
+            <button onClick={() => scrollToSection('contactus')} className="hover:text-[#3B82F6]">Contact Us</button>
+          </div>
+  
+          {/* Book Appointment Button */}
+          <div className="hidden md:flex">
+            <button 
+              onClick={() => scrollToSection('contactus')}
+              className="bg-purple-100 hover:bg-purple-200 transition text-gray-800 text-base px-6 py-2 rounded-full"
+            >
+              Book an Appointment
+            </button>
+          </div>
+  
+          {/* Mobile Menu Toggle */}
+          <div className="md:hidden">
+            <button onClick={toggleMenu}>
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
+  
         </div>
-
-        {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8 items-center font-lato text-[20px] font-[500] text-[#4A5568]">
-          <button onClick={() => scrollToSection('about')} className="hover:text-[#3B82F6]">About</button>
-          <button onClick={() => scrollToSection('service')} className="hover:text-[#3B82F6]">Service</button>
-          <button onClick={() => scrollToSection('stories')} className="hover:text-[#3B82F6]">Testimonial</button>
-          <button onClick={() => scrollToSection('blog')} className="hover:text-[#3B82F6]">Blog</button>
-          <button onClick={() => scrollToSection('contactus')} className="hover:text-[#3B82F6]">Contact Us</button>
-        </div>
-
-        {/* Book Appointment Button */}
-        <button 
-          onClick={() => scrollToSection('contactus')} 
-          className="bg-purple-100 text-gray-800 md:text-[18px] text-[15px] font-[400] leading-[100%] md:px-7 md:py-3 py-1 px-2 rounded-full hover:bg-purple-200 transition"
-        >
-          Book an Appointment
-        </button>
-
-        {/* Mobile Menu Icon */}
-        <div className="md:hidden">
-          <button onClick={toggleMenu}>
-            {isOpen ? <X /> : <Menu />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden px-8 pb-4 space-y-4 font-lato text-[16px] font-[500] text-[#4A5568]">
-          <button onClick={() => scrollToSection('about')} className="block w-full text-left">About</button>
-          <button onClick={() => scrollToSection('service')} className="block w-full text-left">Service</button>
-          <button onClick={() => scrollToSection('stories')} className="block w-full text-left">Testimonial</button>
-          <button onClick={() => scrollToSection('blog')} className="hover:text-[#3B82F6]">Blog</button>
-          <button onClick={() => scrollToSection('contactus')} className="block w-full text-left">Contact</button>
-        </div>
-      )}
-    </nav>
-  );
-}
+  
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="md:hidden bg-white shadow-lg px-6 py-4 space-y-4 text-[#4A5568] font-medium text-lg">
+            <button onClick={() => scrollToSection('about')} className="block w-full text-left">About</button>
+            <button onClick={() => scrollToSection('service')} className="block w-full text-left">Service</button>
+            <button onClick={() => scrollToSection('stories')} className="block w-full text-left">Testimonial</button>
+            <Link to="/blogpage" className="block w-full text-left hover:text-[#3B82F6]">Blog</Link>
+            <button onClick={() => scrollToSection('contactus')} className="block w-full text-left">Contact</button>
+            <button
+              onClick={() => scrollToSection('contactus')}
+              className="bg-purple-100 hover:bg-purple-200 transition text-gray-800 w-full text-center mt-2 py-2 rounded-full"
+            >
+              Book an Appointment
+            </button>
+          </div>
+        )}
+      </nav>
+    );
+  };
+  
