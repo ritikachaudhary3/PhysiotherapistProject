@@ -3,27 +3,26 @@ import Img from '/src/assets/aboutimg.png'
 
 import { ArrowRight, Award } from 'lucide-react'; // Make sure you have lucide-react installed
 
+
+
 const About = () => {
   return (
-    <section
-      id="about"
-      className="relative min-h-screen flex items-center justify-center px-6 md:px-20 bg-[#F1F8FF]"
-    >
-      <div className="max-w-7xl w-full flex flex-col md:flex-row items-center gap-16 md:gap-32">
+    <section id="about" className="bg-[#F1F8FF] py-20 px-6 md:px-20">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16 md:gap-28">
         
         {/* Image Section */}
-        <div className="flex flex-col items-center md:items-start">
-          <div className="w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden">
-            <img
-              src={Img}
-              alt="Dr. Radhika Sharma"
+        <div className="flex-shrink-0">
+          <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden mx-auto">
+            <img 
+              src={Img} 
+              alt="Dr. Radhika Sharma" 
               className="w-full h-full object-cover"
             />
           </div>
 
           {/* Experience Badge */}
-          <div className="flex items-center justify-center md:justify-start mt-4">
-            <div className="flex items-center bg-white px-4 py-2 rounded-full text-sm font-semibold text-[#4A5568] gap-2 shadow-md">
+          <div className="flex justify-center mt-6">
+            <div className="flex items-center bg-white px-5 py-2 rounded-full text-sm font-semibold text-[#4A5568] gap-2 shadow-md">
               <Award className="w-4 h-4 text-pink-500" />
               15+ Years Experience
             </div>
@@ -32,10 +31,10 @@ const About = () => {
 
         {/* Text Content */}
         <div className="text-center md:text-left">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#4A5568] mb-2">
+          <h2 className="text-2xl md:text-4xl font-bold text-[#4A5568] mb-4">
             Dr. Radhika Sharma, MPT
           </h2>
-          <p className="text-[#4A5568] font-semibold mb-4">
+          <p className="text-lg font-semibold text-[#4A5568] mb-4">
             Senior Physiotherapist
           </p>
           <p className="text-[#4A5568] mb-4 max-w-2xl">
@@ -49,13 +48,17 @@ const About = () => {
           <div className="flex flex-col sm:flex-row gap-4 mb-6">
             <div className="flex items-center gap-2 text-sm text-[#4A5568]">
               <Award className="w-4 h-4 text-pink-500" />
-              Top Rehab Specialist
-              <span className="text-xs text-gray-500">Delhi Health Award 2019</span>
+              <div>
+                Top Rehab Specialist
+                <div className="text-xs text-gray-500">Delhi Health Award 2019</div>
+              </div>
             </div>
             <div className="flex items-center gap-2 text-sm text-[#4A5568]">
               <Award className="w-4 h-4 text-pink-500" />
-              Best Physiotherapist
-              <span className="text-xs text-gray-500">India Medical Forum 2023</span>
+              <div>
+                Best Physiotherapist
+                <div className="text-xs text-gray-500">India Medical Forum 2023</div>
+              </div>
             </div>
           </div>
 
@@ -70,6 +73,9 @@ const About = () => {
     </section>
   );
 };
+
+
+
 
 
 
