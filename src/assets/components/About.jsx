@@ -7,7 +7,7 @@ import { ArrowRight, Award } from 'lucide-react'; // Make sure you have lucide-r
 
 const About = () => {
   return (
-    <section id="about" className="bg-[#F1F8FF] py-20 px-6 md:px-20">
+    <section id="about" className="bg-[#fff] py-20 px-6 md:px-20">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16 md:gap-28">
         
         {/* Image Section */}

@@ -9,12 +9,13 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false); // Close mobile menu after click
-    }
+    const element = document.getElementById(id);
+    const yOffset = -100; // Adjust this based on your navbar height (e.g., -80px to -100px)
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+  
+    window.scrollTo({ top: y, behavior: 'smooth' });
   };
+  
   
     return (
       <nav className="bg-white border-b-2 sticky top-0 z-50">
@@ -22,8 +23,8 @@ export default function Navbar() {
           
           {/* Brand */}
           <div className="font-lato text-2xl md:text-3xl font-semibold">
-          <Link to='/'className="text-gray-900">Serene</Link>
-            <span className="text-[#3B82F6] hover:text-[#D44D7D]">Physio</span>
+          <Link to='/'className="text-gray-900">Serene
+            <span className="text-[#3B82F6] hover:text-[#D44D7D]">Physio</span></Link>
           </div>
   
           {/* Desktop Menu */}
