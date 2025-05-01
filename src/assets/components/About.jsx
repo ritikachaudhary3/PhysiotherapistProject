@@ -7,7 +7,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative h-screen flex items-center justify-center px-6 md:px-20 bg-[#F1F8FF]"
+      className="relative min-h-screen flex items-center justify-center px-6 md:px-20 bg-[#F1F8FF]"
     >
       <div className="max-w-7xl w-full flex flex-col md:flex-row items-center gap-16 md:gap-32">
         
