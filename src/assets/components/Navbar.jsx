@@ -22,7 +22,7 @@ export default function Navbar() {
           
           {/* Brand */}
           <div className="font-lato text-2xl md:text-3xl font-semibold">
-            <span className="text-gray-900">Serene</span>
+          <Link to='/'className="text-gray-900">Serene</Link>
             <span className="text-[#3B82F6] hover:text-[#D44D7D]">Physio</span>
           </div>
   
