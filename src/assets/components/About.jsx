@@ -62,7 +62,7 @@ const About = () => {
           </div>
 
           {/* View Full Bio */}
-          <div className="flex items-center gap-2 text-blue-600 cursor-pointer hover:underline font-semibold">
+          <div className="flex items-center gap-2 text-gray-800 cursor-pointer hover:underline font-semibold">
             View Full Bio
             <ArrowRight className="w-4 h-4" />
           </div>
