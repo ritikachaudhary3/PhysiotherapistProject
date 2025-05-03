@@ -1,6 +1,5 @@
 import React from 'react'
 import Img from '/src/assets/aboutimg.png'
-
 import { ArrowRight, Award } from 'lucide-react'; // Make sure you have lucide-react installed
 
 
@@ -73,11 +72,6 @@ const About = () => {
     </section>
   );
 };
-
-
-
-
-
 
 
 export default About

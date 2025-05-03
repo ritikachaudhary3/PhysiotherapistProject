@@ -18,7 +18,8 @@ export default function Navbar() {
   
   
     return (
-      <nav className="bg-white border-b-2 sticky top-0 z-50">
+      <nav className="bg-white border-b-2 sticky top-0 z-50 shadow-md 
+">
         <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6 md:px-20">
           
           {/* Brand */}
@@ -40,7 +41,7 @@ export default function Navbar() {
           <div className="hidden md:flex">
             <button 
               onClick={() => scrollToSection('contactus')}
-              className="bg-purple-100 hover:bg-purple-200 transition text-gray-800 text-base px-6 py-2 rounded-full"
+              className="bg-purple-100 hover:bg-purple-200  text-gray-800 text-base px-6 py-2 rounded-full hover:scale-110 transition-transform duration-300"
             >
               Book an Appointment
             </button>

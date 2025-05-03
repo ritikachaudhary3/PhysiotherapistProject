@@ -15,7 +15,7 @@ const Home = () => {
   };
   return (
     <div
-      className="relative h-screen flex px-12 items-center bg-center"
+      className="relative h-screen flex px-12 items-center bg-center bg-no-repeat bg-cover"
       style={{
         backgroundImage: `url(${bgImage})`, // Or use public path: url('/bg.jpg')
       }}
